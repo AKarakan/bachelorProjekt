@@ -13,15 +13,15 @@ app.listen(port, function(){
 app.use(cors());
 
 //route to client
-let client = require('./client/client')
+let client = require('./routes/client/client')
 app.use('/client', client);
 
 //route to tester
-let tester =require('./tester/tester')
+let tester =require('./routes/tester/tester')
 app.use('/tester', tester);
 
 //route to assignment
-let assignment = require('./assignment/assignment')
+let assignment = require('./routes/assignment/assignment')
 app.use('/assignment', assignment);
 
 app.get('/', function(req,res)

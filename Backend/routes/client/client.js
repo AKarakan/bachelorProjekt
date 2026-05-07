@@ -29,12 +29,13 @@ client.get('/', (req, res, next)=>{
 client.post('/', (req, res, next) =>{
     let result = Object.keys(req.body).map((key) => "\""+req.body[key]+"\"");
     console.log(result);
-    con.query("INSERT INTO client VALUES(null," + result.toString()+")",(err)=>{
+    con.query("INSERT INTO client VALUES(null," + result.toString()+")",(err, field)=>{
         if (err) res.status(500).send(err)
         console.log("eine weitere zeile erfolgreich hinzugefügt");
+        console.log(field)
+        //let message = "eine weitere zeile erfolgreich hinzugefügt" + result.toString()
+        res.status(200).send({"message": "Ok","insertId": field.insertId});
     });
-    let message = "eine weitere zeile erfolgreich hinzugefügt" + result.toString()
-    res.status(200).send(message)
 });
 
 
