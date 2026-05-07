@@ -13,48 +13,48 @@ insert into client values (null, 'Abdus Geile Firma', 'client pass', 'eine firma
 
 insert into assignment values(null,        '1',        'Arcaden Test titel',        'Ein Test bei in den Kölner Arcaden.',   
      'Remote',        '51103',        'Kalker Hauptstraße 55',        '55.55',        '10',        '{"Asys":["Brailezeile"]}',   
-        '{"ReqNeeds":["Elevator"]}',        'Active',        NOW(),        '2025-09-15 12:00:00',        '2025-09-16 12:00:00',        '2025-09-17 10:00:00', ST_GeomFromText('POINT(50.93926871149934 6.9978738652859995)'));
+        '{"ReqNeeds":["Elevator"]}',        'Active',        NOW(),        ADDDATE(NOW(),7),        ADDDATE(NOW(),30),        ADDDATE(NOW(),35), ST_GeomFromText('POINT(50.93926871149934 6.9978738652859995)'));
 
 insert into assignment values(null,        '2',        'TH Köln Campus Deutz Test titel',        'Ein Test zum in der TH in Deutz',   
      'Hybrid',        '50679',        'Betzdorfer Straße 2',        '55.55',        '10',        '{"Asys":["Special Keyboard"]}',   
-        '{"ReqNeeds":["Elevator"]}',        'Active',        NOW(),        '2025-09-15 12:00:00',        '2025-09-16 12:00:00',        '2025-09-17 10:00:00', ST_GeomFromText('POINT(50.93378788278587 6.988655659214306)'));
+        '{"ReqNeeds":["Elevator"]}',        'Active',        NOW(),        ADDDATE(NOW(),7),        ADDDATE(NOW(),30),        ADDDATE(NOW(),35), ST_GeomFromText('POINT(50.93378788278587 6.988655659214306)'));
 
 insert into assignment values(null,        '3',        'Dom Test titel',        'Ein Test im Dom',   
      'OnSite',        '50667',        'Domkloster 4',        '55.55',        '10',        '{"Asys":["Screen Reader","High Contrast"]}',   
-        '{"ReqNeeds":["Elevator"]}',        'Active',        NOW(),        '2025-09-15 12:00:00',        '2025-09-16 12:00:00',        '2025-09-17 10:00:00', ST_GeomFromText('POINT(50.94152594317213 6.9584503739639265)'));
+        '{"ReqNeeds":["Elevator"]}',        'Active',        NOW(),        ADDDATE(NOW(),7),        ADDDATE(NOW(),30),        ADDDATE(NOW(),35), ST_GeomFromText('POINT(50.94152594317213 6.9584503739639265)'));
 -----
 insert into assignment values(null,        '1',        'Brandenburger Tor Test titel',        'Ein Test im Brandenburger Tor.',   
      'OnSite',        '10117',        'Pariser Platz',        '55.55',        '10',        '{"Asys":["Color Inverter","Zoom"]}',   
-        '{"ReqNeeds":["Elevator"]}',        'Active',        NOW(),        '2025-09-15 12:00:00',        '2025-09-16 12:00:00',        '2025-09-17 10:00:00', ST_GeomFromText('POINT(52.51741259514561 13.377783128824055)'));
+        '{"ReqNeeds":["Elevator"]}',        'Active',        NOW(),        ADDDATE(NOW(),7),        ADDDATE(NOW(),30),        ADDDATE(NOW(),35), ST_GeomFromText('POINT(52.51741259514561 13.377783128824055)'));
 
 insert into assignment values(null,        '2',        'Berliner Mauer Test titel',        'Ein Test an der Berliner Mauer.',   
      'Remote',        '10243',        'Mühlenstraße',        '55.55',        '10',        '{"Asys":["Brailezeile"]}',   
-        '{"ReqNeeds":["Elevator"]}',        'Active',        NOW(),        '2025-09-15 12:00:00',        '2025-09-16 12:00:00',        '2025-09-17 10:00:00', ST_GeomFromText('POINT(52.50532751520173 13.440342205908983)'));
+        '{"ReqNeeds":["Elevator"]}',        'Active',        NOW(),        ADDDATE(NOW(),7),        ADDDATE(NOW(),30),        ADDDATE(NOW(),35), ST_GeomFromText('POINT(52.50532751520173 13.440342205908983)'));
 
 insert into assignment values(null,        '3',        'Berliner Zoo Test titel',        'Ein Test im Berliner Zoo.',   
      'Hybrid',        '10787',        'Hardenbergpl. 8',        '55.55',        '10',        '{"Asys":["Special Keyboard"]}',   
-        '{"ReqNeeds":["Elevator"]}',        'Active',        NOW(),        '2025-09-15 12:00:00',        '2025-09-16 12:00:00',        '2025-09-17 10:00:00', ST_GeomFromText('POINT(52.509123022048406 13.339799270433337)'));
+        '{"ReqNeeds":["Elevator"]}',        'Active',        NOW(),        ADDDATE(NOW(),7),        ADDDATE(NOW(),30),        ADDDATE(NOW(),35), ST_GeomFromText('POINT(52.509123022048406 13.339799270433337)'));
 -------
 insert into assignment values(null,        '1',        'Little Tokyo Düsseldorf Test titel',        'Ein Test in Little Tokyo in Düsseldorf',   
      'Hybrid',        '40210',        'Immermannstraße',        '55.55',        '10',        '{"Asys":["Screen Reader","High Contrast"]}',   
-        '{"ReqNeeds":["Elevator"]}',        'Active',        NOW(),        '2025-09-15 12:00:00',        '2025-09-16 12:00:00',        '2025-09-17 10:00:00', ST_GeomFromText('POINT(51.22380320123876 6.788030174112146)'));
+        '{"ReqNeeds":["Elevator"]}',        'Active',        NOW(),        ADDDATE(NOW(),7),        ADDDATE(NOW(),30),        ADDDATE(NOW(),35), ST_GeomFromText('POINT(51.22380320123876 6.788030174112146)'));
         
 insert into assignment values(null,        '1',        'EKO-Haus der Japanischen Kultur eV Test titel',        'Ein Test im EKO-Haus der Japanischen Kultur eV',   
      'OnSite',        '40547',        'Brüggener Weg 6',        '55.55',        '10',        '{"Asys":["Color Inverter","Zoom"]}',   
-        '{"ReqNeeds":["Elevator"]}',        'Active',        NOW(),        '2025-09-15 12:00:00',        '2025-09-16 12:00:00',        '2025-09-17 10:00:00', ST_GeomFromText('POINT(51.240200506045376 6.7455599726873565)'));
+        '{"ReqNeeds":["Elevator"]}',        'Active',        NOW(),        ADDDATE(NOW(),7),        ADDDATE(NOW(),30),        ADDDATE(NOW(),35), ST_GeomFromText('POINT(51.240200506045376 6.7455599726873565)'));
 ------
 insert into assignment values(null,        '1',        'GÖthe-Museum Düsseldorf Test titel',        'Ein Test im GÖthe-Museum in Düsseldorf',   
      'Remote',        '40211',        'Jacobistraße 2',        '55.55',        '10',        '{"Asys":["Brailezeile"]}',   
-        '{"ReqNeeds":["Elevator"]}',        'Active',        NOW(),        '2025-09-15 12:00:00',        '2025-09-16 12:00:00',        '2025-09-17 10:00:00', ST_GeomFromText('POINT(51.231300750614075 6.7878087311004185)'));
+        '{"ReqNeeds":["Elevator"]}',        'Active',        NOW(),        ADDDATE(NOW(),7),        ADDDATE(NOW(),30),        ADDDATE(NOW(),35), ST_GeomFromText('POINT(51.231300750614075 6.7878087311004185)'));
 
 insert into assignment values(null,        '2',        'Forum Gummersbach Test titel',        'Ein Test im Forum Gummersbach',   
      'Hybrid',        '51643',        'Steinmüllerallee 5',        '55.55',        '10',        '{"Asys":["Special Keyboard"]}',   
-        '{"ReqNeeds":["Elevator"]}',        'Active',        NOW(),        '2025-09-15 12:00:00',        '2025-09-16 12:00:00',        '2025-09-17 10:00:00', ST_GeomFromText('POINT(51.024950798437814 7.565546299823153)'));
+        '{"ReqNeeds":["Elevator"]}',        'Active',        NOW(),        ADDDATE(NOW(),7),        ADDDATE(NOW(),30),        ADDDATE(NOW(),35), ST_GeomFromText('POINT(51.024950798437814 7.565546299823153)'));
 
 insert into assignment values(null,        '3',        'TH Köln Campus Gummersbach Test titel',        'Ein Test in der Th am Campus Gummersbach.',   
      'OnSite',        '51643',        'Steinmüllerallee 1',        '55.55',        '10',        '{"Asys":["Screen Reader","High Contrast"]}',   
-        '{"ReqNeeds":["Elevator"]}',        'Active',        NOW(),        '2025-09-15 12:00:00',        '2025-09-16 12:00:00',        '2025-09-17 10:00:00', ST_GeomFromText('POINT(51.02329720656926 7.562929923644446)'));
+        '{"ReqNeeds":["Elevator"]}',        'Active',        NOW(),        ADDDATE(NOW(),7),        ADDDATE(NOW(),30),        ADDDATE(NOW(),35), ST_GeomFromText('POINT(51.02329720656926 7.562929923644446)'));
         
 insert into assignment values(null,        '1',        'HAO China Restaurant Test titel',        'Ein Test im HAO China Restaurant',   
      'Remote',        '51643',        'Robertstraße 2',        '55.55',        '10',        '{"Asys":["Color Inverter","Zoom"]}',   
-        '{"ReqNeeds":["Elevator"]}',        'Active',        NOW(),        '2025-09-15 12:00:00',        '2025-09-16 12:00:00',        '2025-09-17 10:00:00', ST_GeomFromText('POINT(51.02960919824218 7.556965395404999)'));
+        '{"ReqNeeds":["Elevator"]}',        'Active',        NOW(),        ADDDATE(NOW(),7),        ADDDATE(NOW(),30),        ADDDATE(NOW(),35), ST_GeomFromText('POINT(51.02960919824218 7.556965395404999)'));
