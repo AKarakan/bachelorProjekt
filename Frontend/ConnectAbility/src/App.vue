@@ -1,4 +1,5 @@
 <script setup>
+import AssignemntReg from './components/assignment/assignemntReg.vue';
 import ClientReg from './components/Clients/clientReg.vue';
 import RegistrationsArea from './components/registrations-area/registrations-area.vue';
 import TesterReg from './components/tester/testerReg.vue';
@@ -9,6 +10,7 @@ import TesterReg from './components/tester/testerReg.vue';
   <RegistrationsArea>
     <ClientReg/>
     <TesterReg/>
+    <AssignemntReg/>
   </RegistrationsArea>
 </template>
 
