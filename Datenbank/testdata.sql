@@ -1,18 +1,18 @@
 -- Tester:innen testing test daten zum testen der tester:innen tabelle
 insert into tester values (null,"Abdu", 'karakan', 'pass', '51103', 'Steinmetzstraße 25', 'abdu.karakan@googlemail.com','0221 123123' ,'https://i.pravatar.cc/400?img=68', '{"Needs": [""]}','{"Asys": ["Hoher Kontrast"]}','OnSite', ST_GeomFromText('POINT(50.94284477264888 7.007675625622846)'));
-insert into tester values (null,"Abdu", 'karakan', 'pass', '51103', 'Steinmetzstraße 25', 'abdu.karakan2@googlemail.com','0221 123124' ,'https://i.pravatar.cc/400?img=68', '{"Needs": [""]}','{"Asys": ["Hoher Kontrast", "Brailezeile", "Screenreader"]}','Hybrid', ST_GeomFromText('POINT(50.94284477264888 7.007675625622846)'));
-insert into tester values (null,"Yasha", 'mueller', 'pass', '50679', 'gebrüder-coblenz-straße 10', 'yasham@googlemail.com','0221 999999' ,'https://i.pravatar.cc/400?img=61', '{"Needs": ["Brailezeile"]}','{"Asys": ["Brailezeile","Screenreader", "Color Inverter", "Zoom"]}','Hybrid', ST_GeomFromText('POINT(50.93139329961169 6.983392396786266)'));
-insert into tester values (null,"Sabine", 'Kuxdorf', 'pass', '50679', 'gebrüder-coblenz-straße 10', 'Sabine@googlemail.com','0221 000000' ,'https://i.pravatar.cc/400?img=49', '{"Needs": ["Brailezeile", "Abholung"]}','{"Asys": ["Brailezeile"]}','Remote', ST_GeomFromText('POINT(50.93139329961169 6.983392396786266)'));
-insert into tester values (null,"Sabine2222", 'Kuxdorf', 'pass', '50679', 'gebrüder-coblenz-straße 10', 'Sabine2@googlemail.com','0221 000001' ,'https://i.pravatar.cc/400?img=49', '{"Needs": ["Brailezeile", "Abholung"]}','{"Asys": ["Brailezeile","Screenreader"]}','OnSite', ST_GeomFromText('POINT(50.93139329961169 6.983392396786266)'));
-insert into tester values (null,"Sabine3", 'Kuxdorf', 'pass', '50679', 'gebrüder-coblenz-straße 10', 'Sabine3@googlemail.com','0221 000002' ,'https://i.pravatar.cc/400?img=49', '{"Needs": ["Brailezeile", "Abholung"]}','{"Asys": ["Brailezeile"]}','Remote', ST_GeomFromText('POINT(50.93139329961169 6.983392396786266)'));
-insert into tester values (null,"Sabine4", 'Kuxdorf', 'pass', '13055', 'Genslerstraße 18', 'Sabine4@googlemail.com','0321 000002' ,'https://i.pravatar.cc/400?img=49', '{"Needs": ["Brailezeile", "Abholung"]}','{"Asys": ["Brailezeile","Zoom"]}','OnSite', ST_GeomFromText('POINT(52.53954100624794 13.498221824778714)'));
+insert into tester values (null,"Abdu", 'karakan', 'pass', '51103', 'Steinmetzstraße 25', 'abdu.karakan2@googlemail.com','0221 123124' ,'https://i.pravatar.cc/400?img=68', '{"Needs": [""]}','{"Asys": ["Hoher Kontrast", "Braillezeile", "Screenreader"]}','Hybrid', ST_GeomFromText('POINT(50.94284477264888 7.007675625622846)'));
+insert into tester values (null,"Yasha", 'mueller', 'pass', '50679', 'gebrüder-coblenz-straße 10', 'yasham@googlemail.com','0221 999999' ,'https://i.pravatar.cc/400?img=61', '{"Needs": ["Braillezeile"]}','{"Asys": ["Braillezeile","Screenreader", "Color Inverter", "Zoom"]}','Hybrid', ST_GeomFromText('POINT(50.93139329961169 6.983392396786266)'));
+insert into tester values (null,"Sabine", 'Kuxdorf', 'pass', '50679', 'gebrüder-coblenz-straße 10', 'Sabine@googlemail.com','0221 000000' ,'https://i.pravatar.cc/400?img=49', '{"Needs": ["Braillezeile", "Abholung"]}','{"Asys": ["Braillezeile"]}','Remote', ST_GeomFromText('POINT(50.93139329961169 6.983392396786266)'));
+insert into tester values (null,"Sabine2222", 'Kuxdorf', 'pass', '50679', 'gebrüder-coblenz-straße 10', 'Sabine2@googlemail.com','0221 000001' ,'https://i.pravatar.cc/400?img=49', '{"Needs": ["Braillezeile", "Abholung"]}','{"Asys": ["Braillezeile","Screenreader"]}','OnSite', ST_GeomFromText('POINT(50.93139329961169 6.983392396786266)'));
+insert into tester values (null,"Sabine3", 'Kuxdorf', 'pass', '50679', 'gebrüder-coblenz-straße 10', 'Sabine3@googlemail.com','0221 000002' ,'https://i.pravatar.cc/400?img=49', '{"Needs": ["Braillezeile", "Abholung"]}','{"Asys": ["Braillezeile"]}','Remote', ST_GeomFromText('POINT(50.93139329961169 6.983392396786266)'));
+insert into tester values (null,"Sabine4", 'Kuxdorf', 'pass', '13055', 'Genslerstraße 18', 'Sabine4@googlemail.com','0321 000002' ,'https://i.pravatar.cc/400?img=49', '{"Needs": ["Braillezeile", "Abholung"]}','{"Asys": ["Braillezeile","Zoom"]}','OnSite', ST_GeomFromText('POINT(52.53954100624794 13.498221824778714)'));
 
 insert into client values (null, 'rails love', 'client pass', 'eine firma welches rails liebt', 'https://i.pravatar.cc/400?img=1', 'rails@love.com');
 insert into client values (null, 'Mercedes Benz', 'client pass', 'Mercedes Benz halt', 'https://i.pravatar.cc/400?img=2', 'Mercedes@Benz.com');
 insert into client values (null, 'Abdus Geile Firma', 'client pass', 'eine firma Von Abdurrahman Karakan', 'https://i.pravatar.cc/400?img=3', 'abdu@Karakan.com');
 
 insert into assignment values(null,        '1',        'Arcaden Test titel',        'Ein Test bei in den Kölner Arcaden.',   
-     'Remote',        '51103',        'Kalker Hauptstraße 55',        '55.55',        '10',        '{"Asys":["Brailezeile"]}',   
+     'Remote',        '51103',        'Kalker Hauptstraße 55',        '55.55',        '10',        '{"Asys":["Braillezeile"]}',   
         '{"ReqNeeds":["Elevator"]}',        'Active',        NOW(),        ADDDATE(NOW(),7),        ADDDATE(NOW(),30),        ADDDATE(NOW(),35), ST_GeomFromText('POINT(50.93926871149934 6.9978738652859995)'));
 
 insert into assignment values(null,        '2',        'TH Köln Campus Deutz Test titel',        'Ein Test zum in der TH in Deutz',   
@@ -28,7 +28,7 @@ insert into assignment values(null,        '1',        'Brandenburger Tor Test t
         '{"ReqNeeds":["Elevator"]}',        'Active',        NOW(),        ADDDATE(NOW(),7),        ADDDATE(NOW(),30),        ADDDATE(NOW(),35), ST_GeomFromText('POINT(52.51741259514561 13.377783128824055)'));
 
 insert into assignment values(null,        '2',        'Berliner Mauer Test titel',        'Ein Test an der Berliner Mauer.',   
-     'Remote',        '10243',        'Mühlenstraße',        '55.55',        '10',        '{"Asys":["Brailezeile"]}',   
+     'Remote',        '10243',        'Mühlenstraße',        '55.55',        '10',        '{"Asys":["Braillezeile"]}',   
         '{"ReqNeeds":["Elevator"]}',        'Active',        NOW(),        ADDDATE(NOW(),7),        ADDDATE(NOW(),30),        ADDDATE(NOW(),35), ST_GeomFromText('POINT(52.50532751520173 13.440342205908983)'));
 
 insert into assignment values(null,        '3',        'Berliner Zoo Test titel',        'Ein Test im Berliner Zoo.',   
@@ -44,7 +44,7 @@ insert into assignment values(null,        '1',        'EKO-Haus der Japanischen
         '{"ReqNeeds":["Elevator"]}',        'Active',        NOW(),        ADDDATE(NOW(),7),        ADDDATE(NOW(),30),        ADDDATE(NOW(),35), ST_GeomFromText('POINT(51.240200506045376 6.7455599726873565)'));
 ------
 insert into assignment values(null,        '1',        'GÖthe-Museum Düsseldorf Test titel',        'Ein Test im GÖthe-Museum in Düsseldorf',   
-     'Remote',        '40211',        'Jacobistraße 2',        '55.55',        '10',        '{"Asys":["Brailezeile"]}',   
+     'Remote',        '40211',        'Jacobistraße 2',        '55.55',        '10',        '{"Asys":["Braillezeile"]}',   
         '{"ReqNeeds":["Elevator"]}',        'Active',        NOW(),        ADDDATE(NOW(),7),        ADDDATE(NOW(),30),        ADDDATE(NOW(),35), ST_GeomFromText('POINT(51.231300750614075 6.7878087311004185)'));
 
 insert into assignment values(null,        '2',        'Forum Gummersbach Test titel',        'Ein Test im Forum Gummersbach',   
