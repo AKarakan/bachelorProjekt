@@ -16,7 +16,7 @@ let	v_workingSite = ref('');
 let serverMessage = ref('');
 
 
-function sendData(){
+function sendTesterData(){
   axios.post("http://localhost:3000/tester",{
 
     Name : v_name.value,
@@ -85,7 +85,7 @@ function sendData(){
           <input type="radio" id="Hybrid" value="Hybrid" v-model="v_workingSite" />
           <label for="Hybrid">Hybrid</label>
         </div>
-        <button @click="sendData()">Senden</button>
+        <button @click="sendTesterData()">Senden</button>
     </div>
 </template>
 
