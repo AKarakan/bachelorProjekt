@@ -2,7 +2,7 @@
 import axios from 'axios';
 import { ref } from 'vue';
 
-let v_clientFk = ref('');
+let v_clientFk = ref('0');
 let v_title = ref('');
 let v_description = ref('');
 let v_site = ref('');
@@ -10,11 +10,15 @@ let v_site_ZipCode = ref('');
 let v_site_Adress = ref('');
 let v_assistenceSystems = ref([]);
 let v_requiredNeeds = ref('');
+let v_distance = ref('0');
 let v_hourlyRate = ref('55.55');
 let v_timeRequired = ref('10');
 
+let v_reqAsys = ref([]);
+let v_candidates = ref([]);
+let v_einCandidadteAsys = ref([]);
 
-function sendData(){
+function sendAssignmentData(){
   axios.post("http://localhost:3000/assignment",{
     ClientFk : v_clientFk.value,
     Title : v_title.value,
@@ -27,8 +31,21 @@ function sendData(){
     AssistenceSystems : v_assistenceSystems.value,
     RequiredNeeds : v_requiredNeeds.value
   })
-  .then((response) => {console.log(response.data)})
+  .then((response) => {
+    console.log(response.data.insertId);
+    axios.get(`http://localhost:3000/assignment/${response.data.insertId}/candidates/${v_distance.value}`)
+    .then((response2)=>{
+      console.log(response2);
+      v_reqAsys.value = response2.data.Asys;
+      v_candidates.value = response2.data.candidaten;
+    })
+  })
   .catch((error) => {console.log(error)})
+}
+
+function zumEntfernen(zumEntfernen){
+  v_reqAsys.value = v_reqAsys.value.filter((elem)=> zumEntfernen.includes(elem));  
+  
 }
 
 </script>
@@ -37,7 +54,7 @@ function sendData(){
 <template>
     <div class="registration-box">
         <div class="registration-title">Registration</div>
-        <div class="registration-subtitle">Test Person</div>
+        <div class="registration-subtitle">Auftrag</div>
         <div class="personals">
           <p>ClientFk</p>
           <input v-model="v_clientFk">
@@ -56,26 +73,53 @@ function sendData(){
         </div>
         <div class="Asys">
           <p>Assistenz Systeme</p>
-          <input type="checkbox" id="Braillezeile" value="Braillezeile" v-model="v_assistenceSystems" />
-          <label for="Braillezeile">Braillezeile</label>
-          <input type="checkbox" id="Zoom" value="Zoom" v-model="v_assistenceSystems" />
-          <label for="Zoom">Zoom</label>
-          <input type="checkbox" id="InvertierteFarben" value="Invertierte Farben" v-model="v_assistenceSystems" />
-          <label for="InvertierteFarben">Invertierte Farben</label>
-          <input type="checkbox" id="Screendreader" value="Screendreader" v-model="v_assistenceSystems" />
-          <label for="Screendreader">Screendreader</label>
+          <input type="checkbox" id="a_Braillezeile" value="Braillezeile" v-model="v_assistenceSystems" />
+          <label for="a_Braillezeile">Braillezeile</label>
+          <input type="checkbox" id="a_Zoom" value="Zoom" v-model="v_assistenceSystems" />
+          <label for="a_Zoom">Zoom</label>
+          <input type="checkbox" id="a_HoherKontrast" value="Hoher Kontrast" v-model="v_assistenceSystems" />
+          <label for="a_HoherKontrast">Hoher Kontrast</label>
+          <input type="checkbox" id="a_Screenreader" value="Screenreader" v-model="v_assistenceSystems" />
+          <label for="Screenreader">Screenreader</label>
         </div>
         <div class="workingsite">
           <p>Reisebereitschaft</p>
-          <input type="radio" id="Remote" value="Remote" v-model="v_site" />
-          <label for="Remote">Remote</label>
-          <input type="radio" id="OnSite" value="OnSite" v-model="v_site" />
-          <label for="OnSite">Onsite</label>
-          <input type="radio" id="Hybrid" value="Hybrid" v-model="v_site" />
-          <label for="Hybrid">Hybrid</label>
+          <input type="radio" id="a_Remote" value="Remote" v-model="v_site" />
+          <label for="a_Remote">Remote</label>
+          <input type="radio" id="a_OnSite" value="OnSite" v-model="v_site" />
+          <label for="a_OnSite">Onsite</label>
+          <input type="radio" id="a_Hybrid" value="Hybrid" v-model="v_site" />
+          <label for="a_Hybrid">Hybrid</label>
         </div>
-        <button @click="sendData()">Senden</button>
+        <div calss="distance">
+          <p>Entfernun (Umkreis KM)</p>
+          <input type="number" name="Distance" id="Distance" v-model="v_distance">
+        </div>
+        <button @click="sendAssignmentData()">Senden</button>
     </div>
+
+    <div class="reqiredAsys-box">
+      <label id="reqAsys">Sie haben folgende Assistenz Systeme Angefordert: </label>
+      <li v-for="x in v_reqAsys.values()">
+        <label for={{ x }}>{{ x }}</label>
+      </li>
+      <div class="candidates-box">
+        <li v-for="einCandidat in v_candidates">
+          <div class="einCandidate">
+            <label for="Vorname">Name: {{ einCandidat.vorname +" "}} </label>
+            <label for="Nachname"> {{ einCandidat.nachname }} </label>
+            <div>
+              <label for="tAsys"> Assiste Systeme : 
+                <li v-for="einAsys in JSON.parse(JSON.parse(JSON.stringify(einCandidat.tAsys))).Asys">{{ einAsys }}</li>
+              </label>
+            </div>
+            <button type="button" @click="zumEntfernen(JSON.parse(JSON.parse(JSON.stringify(einCandidat.tAsys))).Asys)">Kontaakt</button>
+          </div>
+        </li>
+    </div>
+
+    </div>
+
 </template>
 
 <style scoped>
