@@ -17,8 +17,10 @@ import TesterReg from './components/tester/testerReg.vue';
 <style>
     body {
       font-family: Arial, sans-serif;
+      color: black;
       margin: 20px;
       background: bisque;
+      list-style: none;
     }
 
     div {
