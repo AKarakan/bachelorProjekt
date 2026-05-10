@@ -92,7 +92,7 @@ assignment.post('/', (req,res,next)=>{
                     ADDDATE(NOW(),35),\
                     ST_GeomFromText('POINT(${data[0].latitude} ${data[0].longitude})'));` 
                     console.log(query);
-                con.query(query, (err) => {
+                con.query(query, (err, field) => {
                     if (err) 
                     {
                         console.log(err);
@@ -100,7 +100,8 @@ assignment.post('/', (req,res,next)=>{
                     }
                     else
                     {
-                        res.status(200).send("eintrag erfolgreich in assignment eingefügt")
+                        console.log(field);
+                        res.status(200).send({"insertId": field.insertId})
                     }
                 })
             }
