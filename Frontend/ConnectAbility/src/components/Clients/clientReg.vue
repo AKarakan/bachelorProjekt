@@ -13,7 +13,7 @@ let serverMessage = ref('');
 let insertedID = ref('');
 
 
-function sendData(){
+function sendClientData(){
     axios.post('http://localhost:3000/client',{
     name : v_name.value,
     password : v_password.value,
@@ -46,7 +46,7 @@ function sendData(){
         <input v-model="v_profilepictureURL">
         <p>Email</p>
         <input v-model="v_email" type="email">
-        <button @click="sendData()">senden</button>
+        <button @click="sendClientData()">senden</button>
         <p>{{ insertedID }}</p>
 
         
