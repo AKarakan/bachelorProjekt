@@ -73,8 +73,8 @@ function sendTesterData(){
           <label for="Zoom">Zoom</label>
           <input type="checkbox" id="InvertierteFarben" value="Invertierte Farben" v-model="v_asys" />
           <label for="InvertierteFarben">Invertierte Farben</label>
-          <input type="checkbox" id="Screendreader" value="Screendreader" v-model="v_asys" />
-          <label for="Screendreader">Screendreader</label>
+          <input type="checkbox" id="Screenreader" value="Screenreader" v-model="v_asys" />
+          <label for="Screenreader">Screenreader</label>
         </div>
         <div class="workingsite">
           <p>Reisebereitschaft</p>
