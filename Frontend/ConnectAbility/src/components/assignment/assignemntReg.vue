@@ -35,8 +35,8 @@ function sendAssignmentData(){
     console.log(response.data.insertId);
     axios.get(`http://localhost:3000/assignment/${response.data.insertId}/candidates/${v_distance.value}`)
     .then((response2)=>{
-      console.log(response2);
-      v_reqAsys.value = response2.data.Asys;
+      let x = response2.data.Asys+"";
+      v_reqAsys.value = x.split(',');
       v_candidates.value = response2.data.candidaten;
     })
   })
@@ -44,7 +44,16 @@ function sendAssignmentData(){
 }
 
 function zumEntfernen(zumEntfernen){
-  v_reqAsys.value = v_reqAsys.value.filter((elem)=> zumEntfernen.includes(elem));  
+  let temp = v_reqAsys.value;
+  temp = temp+"";
+  zumEntfernen = zumEntfernen+"";
+  
+  temp = temp.split(',');
+  zumEntfernen = zumEntfernen.split(',');
+
+  v_reqAsys.value = temp.filter((elem)=> zumEntfernen.includes(elem));
+  
+  if(v_reqAsys.value.length == 0) v_reqAsys.value = ["Alle Assistiven Technologien abgedeckt!"];
   
 }
 
@@ -113,7 +122,7 @@ function zumEntfernen(zumEntfernen){
                 <li v-for="einAsys in JSON.parse(JSON.parse(JSON.stringify(einCandidat.tAsys))).Asys">{{ einAsys }}</li>
               </label>
             </div>
-            <button type="button" @click="zumEntfernen(JSON.parse(JSON.parse(JSON.stringify(einCandidat.tAsys))).Asys)">Kontaakt</button>
+            <button type="button" @click="zumEntfernen(JSON.parse(JSON.parse(JSON.stringify(einCandidat.tAsys))).Asys)">Kontakt</button>
           </div>
         </li>
     </div>
