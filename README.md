@@ -41,3 +41,20 @@ Auch hier müssen externe Pakete vorher installiert werden.
 
 In dem Ordner *"/Frontend/ConnectAbility"* `npm install` ausführen, und danach `npm run dev`, da das Projekt nur mit diesen Parametern getestet wurde.
 
+## Bildiche Darstellung des Suchalgorithmuses
+
+Eine genauere textuelle Beschreibung finden Sie in der Bachelorarbeit.
+
+### Datenbank
+
+Die folgenden Schritte werden in der Datenbank ausgeführt.
+
+![Schritt 1](Bilder/Schritt1Suchalgorithmus.png)
+
+### Backend
+
+![Schritt 2](Bilder/Schrit2Backend.png)
+
+### Forntend
+
+![Schritt 3](Bilder/Schrit3Frontend.png)
