@@ -6,7 +6,7 @@ Das ist eine Repo für die Bachelorarbeit von Abdurrahman Karakan.
 
 Eine kleine Anleitung zum Starten der Anwendungen.
 
-### Datenabnk
+### Datenbank
 
 Zum Starten des Projektes wird eine Instanz von MySQL benötigt.
 Um die vorzubereiten müssen die Dateien aus /Datenbank ausgeführt werden.
@@ -58,3 +58,7 @@ Die folgenden Schritte werden in der Datenbank ausgeführt.
 ### Forntend
 
 ![Schritt 3](Bilder/Schrit3Frontend.png)
+
+## Kommunikations Modell
+
+![SimpleComModel](Bilder/simpleComDiag.png)
